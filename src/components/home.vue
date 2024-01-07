@@ -10,6 +10,14 @@
       <!-- <div class="py-14" /> -->
       <!-- {{selectedEl}} -->
       <v-row>
+
+          <div class="logo-container">
+            <img src="../assets/logo-periodicTable.png" alt="Logo" class="logo-image">
+
+            <!-- Text below the logo -->
+            <p class="logo-text">Së bashku në rrugën e dijes...</p>
+        </div>
+
         <div class="square" :style="{ 'background-color': selectedEl && selectedEl.backgroundColor ? selectedEl.backgroundColor :'#8CED8C'}">
           <h2 class="numberElement">{{ selectedEl && selectedEl.atomicNumber ? selectedEl.atomicNumber : '1' }}</h2>
           <h1 class="symbolElement"><b>{{ selectedEl && selectedEl.symbol ? selectedEl.symbol : 'H' }}</b></h1>
@@ -54,7 +62,9 @@ const selectedElement = (val) => {
   /* float: right; */
 }
 .fill-height {
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
+  background-color: #f2f2f2;
+  /* background-color: #ffffff; */
 }
 .periodicTab{
     margin-top: 3%;
@@ -94,6 +104,26 @@ const selectedElement = (val) => {
     font-family: 'Open Sans';
     padding-top: 2%;
 }
+
+  .logo-image {
+    max-width: 7%;
+    align-content: center;
+  }
+  .logo-text {
+    font-family: 'Edwardian Script ITC', cursive;
+    color: #0070c0;
+    margin-top: -10px;
+    font-size: 32px;
+  }
+
+  .logo-container {
+    text-align: center;
+    margin-bottom: 0px; /* Adjust as needed */
+    margin-top: 1%;
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+  }
 </style>
 
 
